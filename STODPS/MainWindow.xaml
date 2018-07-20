@@ -1,12 +1,21 @@
-﻿<Window x:Class="STODPS.MainWindow"
+﻿<metro:MetroWindow x:Class="STODPS.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:STODPS"
+        xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        ShowTitleBar="False"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen">
+    <metro:MetroWindow.Background>
+        <ImageBrush ImageSource="pack://application:,,,/Resources/background.png" Stretch="UniformToFill" TileMode="FlipXY" ViewportUnits="Absolute" Viewport="0,0,1920,1080"/>
+    </metro:MetroWindow.Background>
+    <metro:MetroWindow.WindowButtonCommands>
+        <metro:WindowButtonCommands Style="{DynamicResource MahApps.Metro.Styles.WindowButtonCommands.Win10}" Theme="Dark" />
+    </metro:MetroWindow.WindowButtonCommands>
     <Grid>
         
     </Grid>
-</Window>
+</metro:MetroWindow>
